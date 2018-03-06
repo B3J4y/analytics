@@ -1,0 +1,14 @@
+language: java
+sudo: false
+install: true
+
+jdk:
+  - oraclejdk9
+
+script:
+  - ./gradlew run
+
+cache:
+  directories:
+    - '$HOME/.gradle'
+    - '.gradle'
