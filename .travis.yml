@@ -7,6 +7,7 @@ jdk:
 
 script:
   - ./gradlew run
+  - ./gradlew test
 
 cache:
   directories:
