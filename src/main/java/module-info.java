@@ -1,0 +1,2 @@
+module de.itj.analytics {
+}
