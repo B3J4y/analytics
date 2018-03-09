@@ -31,5 +31,19 @@ public abstract class PDFReader {
         }
         return "";
     }
+
+    public static String getTextFromPage(PDDocument pdDocument, int page) {
+        try {
+            PDFTextStripper stripper = new PDFTextStripper();
+            stripper.setSortByPosition(true);
+            stripper.setStartPage(page);
+            stripper.setEndPage(page);
+
+            return stripper.getText(pdDocument);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 }
 
